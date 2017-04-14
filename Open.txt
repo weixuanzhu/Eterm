@@ -1,0 +1,12 @@
+*** Settings ***
+Library           OpenEterm/OpenEterm/OpenEterm.py
+Library           AutoItLibrary
+Resource          testflow.txt
+
+*** Test Cases ***
+OpenEterm
+    OpenEterm
+
+SI
+    ESC
+    LOGIN

@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          res.txt
+Library           OpenEterm/OpenEterm/OpenEterm.py
+
+*** Keywords ***
+LOGIN
+    Send    $$OPEN TIPD2
+    OpenEterm.F12

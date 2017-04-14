@@ -8,5 +8,5 @@ OpenEterm
     OpenEterm
 
 SI
-    ESC
+    inputEsc
     LOGIN

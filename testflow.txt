@@ -5,4 +5,8 @@ Library           OpenEterm/OpenEterm/OpenEterm.py
 *** Keywords ***
 LOGIN
     Send    $$OPEN TIPD2
-    OpenEterm.F12
+    sleep    0.5
+    F12
+    Send     SI 21010 12345A 9
+    sleep    0.5
+    F12

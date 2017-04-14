@@ -3,5 +3,5 @@ Library           AutoItLibrary
 Library           OpenEterm/OpenEterm/OpenEterm.py
 
 *** Keywords ***
-ESC
-    OpenEterm.esc
+inputEsc
+    esc

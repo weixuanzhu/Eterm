@@ -5,3 +5,9 @@ Library           OpenEterm/OpenEterm/OpenEterm.py
 *** Keywords ***
 inputEsc
     esc
+
+SendText
+    [Arguments]    ${text1}
+    Send    ${text1}
+    sleep    0.5
+    F12

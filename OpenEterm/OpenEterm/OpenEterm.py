@@ -30,18 +30,6 @@ class OpenEterm():
         #模拟按下Enter键，（键表在1指令.xlsx里）
         win32api.keybd_event(13,0,win32con.WM_KEYUP,0)
 
-    def SendText(self):
-        """发送消息
-        """
-        newwindowName = "eTerm 3 -10.6.177.47 (Direct) - [SESSION 1]"
-        self.neweterm = win32gui.FindWindow(None,newwindowName)
-        print self.neweterm
-
-        msg = '$$OPEN TIPD2'
-        print msg
-        win32gui.SendMessage(newwindowName,win32con.WM_SETTEXT,None,msg)
-        print msg
-
     def esc(self):
         sleep(1)
         win32api.keybd_event(27,0,win32con.WM_KEYUP,0)
@@ -49,3 +37,11 @@ class OpenEterm():
     def F12(self):
        sleep(1)
        win32api.keybd_event(123,0,win32con.WM_KEYUP,0)
+
+    def CtrlA(self):
+        sleep(0.5)
+        win32api.keybd_event(win32con.VK_CONTROL, 0, 0, 0)
+        sleep(0.5)
+        win32api.keybd_event(65, 0, 0, 0)
+        sleep(0.5)
+        win32api.keybd_event(win32con.VK_CONTROL, 0, win32con.KEYEVENTF_KEYUP , 0)

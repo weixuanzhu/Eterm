@@ -1,0 +1,15 @@
+*** Settings ***
+Library           OpenEterm/OpenEterm/OpenEterm.py
+Library           AutoItLibrary
+Resource          testflow.txt
+
+*** Test Cases ***
+打开Eterm
+    OpenEterm
+
+SI
+    inputEsc
+    LOGIN    D2
+
+SO
+    LOGOUT

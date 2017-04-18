@@ -4,9 +4,9 @@ Library           AutoItLibrary
 Resource          testflow.txt
 
 *** Test Cases ***
-OpenEterm
+打开Eterm
     OpenEterm
 
 SI
     inputEsc
-    LOGIN
+    LOGIN    D1

@@ -45,3 +45,19 @@ class OpenEterm():
         win32api.keybd_event(65, 0, 0, 0)
         sleep(0.5)
         win32api.keybd_event(win32con.VK_CONTROL, 0, win32con.KEYEVENTF_KEYUP , 0)
+
+    def F1(self):
+        sleep(1)
+        win32api.keybd_event(112, 0,win32con.WM_KEYUP,0)
+
+    def F2(self):
+        sleep(1)
+        win32api.keybd_event(113 ,0,win32con.WM_KEYUP,0)
+
+    def F3(self):
+        sleep(1)
+        win32api.keybd_event(114,0,win32con.WM_KEYUP,0)
+
+    def F4(self):
+        sleep(1)
+        win32api.keybd_event(115,0,win32con.WM_KEYUP,0)

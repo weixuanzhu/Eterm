@@ -1,15 +1,20 @@
 *** Settings ***
-Resource          res.txt
+Resource          testres.txt
 Library           OpenEterm/OpenEterm/OpenEterm.py
 
 *** Keywords ***
 LOGIN
-    ${SYSTEM}    Set Variable    D2
+    [Arguments]    ${SYSTEM}
     SendText    $$OPEN TIP${SYSTEM}
-    sleep    0.5
     CtrlA
     ${AGNT}    Set Variable    21010
     ${KEY}    Set Variable    12345A
     SendText    SI:${AGNT}/${KEY}/9
     sleep    1
     SendText    CP
+
+LOGOUT
+    SendText    SO
+    SendText    $$CLOSE
+
+Check result

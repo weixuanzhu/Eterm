@@ -8,6 +8,8 @@ inputEsc
 
 SendText
     [Arguments]    ${text1}
+    sleep    1
     Send    ${text1}
     sleep    0.5
     F12
+    sleep    2

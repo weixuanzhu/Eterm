@@ -13,7 +13,7 @@ LOGIN
     SendText    CP
 
 LOGOUT
-    SendText    SO
+    SendText    SO 
     Check result    SIGNED OUT
     sleep    1
     SendText    $$CLOSE

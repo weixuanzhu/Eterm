@@ -2,7 +2,6 @@
 Library           OpenEterm/OpenEterm/OpenEterm.py
 Library           AutoItLibrary
 Resource          testflow.txt
-Library           Screenshot
 
 *** Test Cases ***
 打开Eterm

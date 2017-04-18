@@ -1,7 +1,6 @@
 *** Settings ***
 Library           AutoItLibrary
 Library           OpenEterm/OpenEterm/OpenEterm.py
-Library           Screenshot
 
 *** Keywords ***
 inputEsc

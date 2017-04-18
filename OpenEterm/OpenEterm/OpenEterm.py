@@ -1,6 +1,7 @@
 #-*- coding: UTF-8 -*-
 
 import os
+import AutoItLibrary
 import sys
 from time import sleep
 import win32gui
@@ -61,3 +62,6 @@ class OpenEterm():
     def F4(self):
         sleep(1)
         win32api.keybd_event(115,0,win32con.WM_KEYUP,0)
+
+    def gettext(self):
+        AutoItLibrary.controlgettext()

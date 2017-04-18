@@ -1,6 +1,7 @@
 *** Settings ***
 Library           AutoItLibrary
 Library           OpenEterm/OpenEterm/OpenEterm.py
+Library           Screenshot
 
 *** Keywords ***
 inputEsc
@@ -13,3 +14,15 @@ SendText
     sleep    0.5
     F12
     sleep    2
+
+getReturn
+    ${Resulttext1}=    wingettext    strTitle=eTerm 3 -10.6.177.47 (Direct) - [TIPD2_SESSION 1]
+    log    ${Resulttext1}
+    [Return]    ${Resulttext1}
+
+Check result
+    [Arguments]    ${checkPoint}
+    log    ${checkPoint}
+    getReturn
+    Should Contain    ${Resulttext1}    ${checkPoint}
+    log    ${Resulttext1}

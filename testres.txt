@@ -12,16 +12,17 @@ SendText
     Send    ${text1}
     sleep    0.5
     F12
-    sleep    2
+    sleep    0.5
 
 getReturn
-    ${Resulttext1}=    wingettext    strTitle=eTerm 3 -10.6.177.47 (Direct) - [TIPD2_SESSION 1]
+    ${Resulttext1}    wingettext    strTitle=eTerm 3 -10.6.177.47 (Direct) - [TIPD2_SESSION 1]
     log    ${Resulttext1}
     [Return]    ${Resulttext1}
 
-Check result
-    [Arguments]    ${checkPoint}
+Check result frequency
+    [Arguments]    ${checkPoint}    ${frequency}
     log    ${checkPoint}
     getReturn
-    Should Contain    ${Resulttext1}    ${checkPoint}
-    log    ${Resulttext1}
+    ${Resulttext}=    getReturn
+    Should Contain X times    ${Resulttext}    ${checkPoint}    ${frequency}
+    log    ${Resulttext}

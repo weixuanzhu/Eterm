@@ -5,11 +5,15 @@
     <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredIdentifiers">
         <value>
-          <list size="4">
+          <list size="8">
             <item index="0" class="java.lang.String" itemvalue="AutoItLibrary" />
             <item index="1" class="java.lang.String" itemvalue="os" />
             <item index="2" class="java.lang.String" itemvalue="sys" />
             <item index="3" class="java.lang.String" itemvalue="OpenEterm.OpenEterm.OpenEterm.time" />
+            <item index="4" class="java.lang.String" itemvalue="win32gui" />
+            <item index="5" class="java.lang.String" itemvalue="win32api" />
+            <item index="6" class="java.lang.String" itemvalue="win32con" />
+            <item index="7" class="java.lang.String" itemvalue="time" />
           </list>
         </value>
       </option>

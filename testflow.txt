@@ -7,13 +7,13 @@ LOGIN
     [Arguments]    ${SYSTEM}
     SendText    $$OPEN TIP${SYSTEM}
     CtrlA
+    ESC
     ${AGNT}    Set Variable    21010
     ${KEY}    Set Variable    12345A
     SendText    SI:${AGNT}/${KEY}/9
     SendText    CP
 
 LOGOUT
-    SendText    SO 
-    Check result    SIGNED OUT
-    sleep    1
+    SendText    SO
+    Check result frequency    SIGNED OUT    1
     SendText    $$CLOSE

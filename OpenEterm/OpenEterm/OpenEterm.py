@@ -3,12 +3,10 @@
 import os
 import AutoItLibrary
 import sys
-from time import sleep
 import win32gui
 import win32api
 import win32con
-import ConfigParser
-import win32clipboard as w
+from time import sleep
 #参考页面 http://blog.csdn.net/fallinlovelj/article/details/54343520;http://blog.csdn.net/suzyu12345/article/details/52934328
 
 class OpenEterm():
@@ -48,20 +46,20 @@ class OpenEterm():
         win32api.keybd_event(win32con.VK_CONTROL, 0, win32con.KEYEVENTF_KEYUP , 0)
 
     def F1(self):
-        sleep(1)
+        sleep(0.5)
         win32api.keybd_event(112, 0,win32con.WM_KEYUP,0)
 
     def F2(self):
-        sleep(1)
+        sleep(0.5)
         win32api.keybd_event(113 ,0,win32con.WM_KEYUP,0)
 
     def F3(self):
-        sleep(1)
+        sleep(0.5)
         win32api.keybd_event(114,0,win32con.WM_KEYUP,0)
 
     def F4(self):
-        sleep(1)
+        sleep(0.5)
         win32api.keybd_event(115,0,win32con.WM_KEYUP,0)
 
-    def gettext(self):
-        AutoItLibrary.controlgettext()
+   # def getText(self):
+
